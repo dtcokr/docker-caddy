@@ -24,10 +24,10 @@ RUN /usr/bin/caddy -version \
   && /usr/bin/caddy -plugins
 
 EXPOSE 80 443
-VOLUME /root/.caddy /var/www/wwwroot /etc
+VOLUME /root/.caddy /var/www/wwwroot
 WORKDIR /var/www/wwwroot
 
 COPY Caddyfile /etc/Caddyfile
 
 ENTRYPOINT ["/usr/bin/caddy"]
-CMD ["-conf", "/etc/Caddyfile", "-log", "stdout", "-agree=$ACME_AGREE"]
+CMD ["-conf", "/etc/Caddyfile", "-log", "stdout", "-agree", "$ACME_AGREE"]
