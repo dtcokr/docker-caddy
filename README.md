@@ -15,6 +15,7 @@ $ docker run -d -p 2015:2015 dtcokr/caddy
 Go to `http://127.0.0.1:2015` to check if Caddy is running. If running remotely, go to `http://remote_ip:2015`. 
 
 ### Saving Certificates
+Default certificates location `/root/.caddy`
 ```sh
 $ docker run -d \
     -v $PWD/Caddyfile:/etc/Caddyfile \
@@ -26,6 +27,7 @@ $ docker run -d \
 
 ### Mount sites root
 Caddyfile: `/etc/Caddyfile`
+
 Sites root: `/www`
 
 ```sh
