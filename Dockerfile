@@ -1,33 +1,35 @@
-#Build
+#
+# Build
+#
 FROM golang:1.12.9-alpine as builder
 
 ENV GO111MODULE=on
 
-RUN apk add --no-cache --update git \
-  && mkdir caddy
+RUN apk add --no-cache --update git 
 
-COPY plugin.go /go/caddy
+COPY plugin.go /go/caddy/plugin.go
 
 RUN cd caddy \
   && go mod init caddy \
   && go get github.com/caddyserver/caddy/caddy \
   && go build
 
-#Run
+#
+# Install
+#
 FROM alpine:latest
-
-ENV ACME_AGREE="true"
 
 COPY --from=builder /go/caddy/caddy /usr/bin/caddy
 
 RUN /usr/bin/caddy -version \
   && /usr/bin/caddy -plugins
 
-EXPOSE 80 443
-VOLUME /root/.caddy /var/www/wwwroot /etc
-WORKDIR /var/www/wwwroot
+EXPOSE 80 443 2015
+VOLUME /root/.caddy /www
+WORKDIR /www
 
 COPY Caddyfile /etc/Caddyfile
+COPY index.html /www/index.html
 
-ENTRYPOINT ["/usr/bin/caddy"]
-CMD ["-conf", "/etc/Caddyfile", "-log", "stdout", "-agree=$ACME_AGREE"]
+ENTRYPOINT ["caddy"]
+CMD ["-conf", "/etc/Caddyfile", "-log", "stdout", "-agree"]

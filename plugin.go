@@ -2,6 +2,10 @@ package main
 
 import (
 		"github.com/caddyserver/caddy/caddy/caddymain"
+
+		// plug in plugins here, for example:
+		// _ "import/path/here"
+
 		// http.ipfilter
 		_ "github.com/pyed/ipfilter"
 		// http.git
