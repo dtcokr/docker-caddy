@@ -18,6 +18,7 @@ RUN cd caddy \
 # Install
 #
 FROM alpine:latest
+LABEL maintainer "dtcokr <dtcokr@outlook.com>"
 
 COPY --from=builder /go/caddy/caddy /usr/bin/caddy
 
