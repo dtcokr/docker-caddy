@@ -5,9 +5,6 @@ Run caddy in docker, build from source, add plugin from source. Agree to [Let's 
 This image includes [ipfilter](https://caddyserver.com/docs/http.ipfilter), [git](https://caddyserver.com/docs/http.git), [nobots](https://caddyserver.com/docs/http.nobots) and [realip](https://caddyserver.com/docs/http.realip) plugins.
 Plugins can be configured via the [plugin.go](https://github.com/dtcokr/docker-caddy/blob/drafts/plugin.go) file in the repository.
 
-### License
-This image is built from [source code](https://github.com/caddyserver/caddy). It is subject to the project's [Apache 2.0 License](https://github.com/caddyserver/caddy/blob/baf6db5b570e36ea2fee30d50f879255a5895370/LICENSE.txt). 
-
 ## Usage
 ```sh
 $ docker run -d -p 2015:2015 dtcokr/caddy
