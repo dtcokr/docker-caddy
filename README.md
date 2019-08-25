@@ -1,5 +1,5 @@
 # docker-caddy
-Run caddy in docker, build from source, add plugin from source. Agree to [Let's Encrypt Subscriber Agreement](https://letsencrypt.org/documents/2017.11.15-LE-SA-v1.2.pdf) by **DEFAULT**. Otherwise, modify the Dockerfile.
+Run caddy in docker, build from [source](https://github.com/caddyserver/caddy), add plugin from source. Agree to [Let's Encrypt Subscriber Agreement](https://letsencrypt.org/documents/2017.11.15-LE-SA-v1.2.pdf) by **DEFAULT**. Otherwise, modify the Dockerfile.
 
 ### Plugins
 This image includes [ipfilter](https://caddyserver.com/docs/http.ipfilter), [git](https://caddyserver.com/docs/http.git), [nobots](https://caddyserver.com/docs/http.nobots) and [realip](https://caddyserver.com/docs/http.realip) plugins.
