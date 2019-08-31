@@ -29,8 +29,7 @@ EXPOSE 80 443 2015
 VOLUME /root/.caddy /www
 WORKDIR /www
 
-COPY Caddyfile /etc/Caddyfile
 COPY index.html /www/index.html
 
 ENTRYPOINT ["caddy"]
-CMD ["-conf", "/etc/Caddyfile", "-log", "stdout", "-agree"]
+CMD ["-log", "stdout", "-agree"]

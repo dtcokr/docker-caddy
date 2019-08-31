@@ -14,6 +14,8 @@ import (
 		_ "github.com/Xumeiquer/nobots"
 		// http.realip
 		_ "github.com/captncraig/caddy-realip"
+		// caddy-docker-proxy
+		_ "github.com/lucaslorentz/caddy-docker-proxy/plugin"
 )
 
 func main() {
