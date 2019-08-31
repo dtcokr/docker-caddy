@@ -12,3 +12,5 @@ services:
       - "$HOME/.caddy:/root/.caddy"
       - "/www:/www"
     restart: always
+networks:
+  caddy:
