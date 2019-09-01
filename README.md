@@ -53,3 +53,28 @@ $ docker run -d \
 ```
 ### Caddy-docker-proxy usage
 See [GitHub](github.com/lucaslorentz/caddy-docker-proxy)
+
+`docker-compose.yml` example: 
+use `labels` to generate Caddyfile
+
+```
+version: "3"
+services:
+  caddy:
+    images: dtcokr/caddy
+    ports:
+      - "80:80"
+      - "443:443"
+      - "2015:2015"
+    networks:
+      - caddy
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "/www:/www"
+    restart: always
+    labels:
+      caddy: ":2015"
+      caddy.root: "/www"
+networks:
+  caddy:
+```

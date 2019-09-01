@@ -9,8 +9,11 @@ services:
     networks:
       - caddy
     volumes:
-      - "$HOME/.caddy:/root/.caddy"
+      - "/var/run/docker.sock:/var/run/docker.sock"
       - "/www:/www"
     restart: always
+    labels:
+      caddy: ":2015"
+      caddy.root: "/www"
 networks:
   caddy:
