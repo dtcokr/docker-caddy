@@ -22,7 +22,9 @@ LABEL maintainer "dtcokr <dtcokr@outlook.com>"
 
 COPY --from=builder /go/caddy/caddy /usr/bin/caddy
 
-RUN /usr/bin/caddy -version \
+RUN apk add --update --no-cache ca-certificates \
+  && rm -rf /var/cache/apk/* \
+  && /usr/bin/caddy -version \
   && /usr/bin/caddy -plugins
 
 EXPOSE 80 443 2015
