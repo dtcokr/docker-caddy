@@ -18,7 +18,13 @@ RUN cd caddy \
 # Install
 #
 FROM alpine:latest
+
+ARG VCS_REF
+
+LABEL org.label-schema.vcs-ref=$VCS_REF \
+  org.label-schema.vcs-url="e.g. https://github.com/microscaling/microscaling"
 LABEL maintainer "dtcokr <dtcokr@outlook.com>"
+
 
 COPY --from=builder /go/caddy/caddy /usr/bin/caddy
 
