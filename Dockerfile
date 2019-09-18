@@ -22,7 +22,7 @@ FROM alpine:latest
 ARG VCS_REF
 
 LABEL org.label-schema.vcs-ref=$VCS_REF \
-  org.label-schema.vcs-url="e.g. https://github.com/microscaling/microscaling"
+  org.label-schema.vcs-url="https://github.com/dtcokr/docker-caddy"
 LABEL maintainer "dtcokr <dtcokr@outlook.com>"
 
 
