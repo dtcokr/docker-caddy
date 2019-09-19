@@ -24,7 +24,7 @@ ARG VCS_URL
 
 LABEL org.label-schema.vcs-ref=$VCS_REF \
   org.label-schema.vcs-url=$VCS_URL \ 
-  maintainer "dtcokr <dtcokr@outlook.com>"
+  maintainer="dtcokr <dtcokr@outlook.com>"
 
 
 COPY --from=builder /go/caddy/caddy /usr/bin/caddy
