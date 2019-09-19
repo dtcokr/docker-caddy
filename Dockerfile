@@ -19,10 +19,7 @@ RUN cd caddy \
 #
 FROM alpine:3.10
 
-ARG VCS_REF="git rev-parse --short HEAD"
-
 LABEL maintainer="dtcokr <dtcokr@outlook.com>" \
-  org.label-schema.vcs-ref=$VCS_REF \
   org.label-schema.vcs-url="https://github.com/dtcokr/docker-caddy"
 
 
