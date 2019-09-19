@@ -17,13 +17,14 @@ RUN cd caddy \
 #
 # Install
 #
-FROM alpine:latest
+FROM alpine:3.10
 
 ARG VCS_REF
+ARG VCS_URL
 
 LABEL org.label-schema.vcs-ref=$VCS_REF \
-  org.label-schema.vcs-url="https://github.com/dtcokr/docker-caddy"
-LABEL maintainer "dtcokr <dtcokr@outlook.com>"
+  org.label-schema.vcs-url=$VCS_URL \ 
+  maintainer "dtcokr <dtcokr@outlook.com>"
 
 
 COPY --from=builder /go/caddy/caddy /usr/bin/caddy
