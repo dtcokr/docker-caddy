@@ -1,8 +1,6 @@
 # docker-caddy
 ![Docker Pulls](https://img.shields.io/docker/pulls/dtcokr/caddy)
-![Docker Stars](https://img.shields.io/docker/stars/dtcokr/caddy)
 [![](https://images.microbadger.com/badges/image/dtcokr/caddy.svg)](https://microbadger.com/images/dtcokr/caddy "Get your own image badge on microbadger.com")
-![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/dtcokr/caddy)
 ![GitHub last commit](https://img.shields.io/github/last-commit/dtcokr/docker-caddy)
 
 Run caddy in docker, build from [source](https://github.com/caddyserver/caddy), add plugin from source. Agree to [Let's Encrypt Subscriber Agreement](https://letsencrypt.org/documents/2017.11.15-LE-SA-v1.2.pdf) by **DEFAULT**. Otherwise, modify the Dockerfile.
