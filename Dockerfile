@@ -24,7 +24,7 @@ ARG VCS_URL
 
 LABEL org.label-schema.vcs-ref=$VCS_REF \
   org.label-schema.vcs-url="https://github.com/dtcokr/docker-caddy" \
-  org.label-schema.schema-version = "1.0" \
+  org.label-schema.schema-version="1.0" \
   maintainer="dtcokr <dtcokr@outlook.com>"
 
 
