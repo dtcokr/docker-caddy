@@ -3,8 +3,6 @@
 #
 FROM golang:1.12.9-alpine as builder
 
-LABEL org.label-schema.vcs-url="https://github.com/dtcokr/docker-caddy"
-
 ENV GO111MODULE=on
 
 RUN apk add --no-cache --update git 
@@ -21,7 +19,8 @@ RUN cd caddy \
 #
 FROM alpine:3.10
 
-LABEL maintainer="dtcokr <dtcokr@outlook.com>"
+LABEL maintainer="dtcokr <dtcokr@outlook.com>" \
+  org.label-schema.vcs-url="https://github.com/dtcokr/docker-caddy"
 
 
 COPY --from=builder /go/caddy/caddy /usr/bin/caddy
