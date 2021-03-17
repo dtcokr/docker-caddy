@@ -7,7 +7,7 @@ import (
 		// _ "import/path/here"
 
 		// caddy-docker-proxy
-		_ "github.com/lucaslorentz/caddy-docker-proxy/plugin"
+		_ "github.com/lucaslorentz/caddy-docker-proxy/tree/v0/plugin"
 )
 
 func main() {
