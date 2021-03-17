@@ -11,7 +11,7 @@ COPY plugin.go /go/caddy/plugin.go
 
 RUN cd caddy \
   && go mod init caddy \
-  && go get github.com/caddyserver/caddy@v1 \
+  && go get github.com/caddyserver/caddy/tree/v1 \
   && go build
 
 #
