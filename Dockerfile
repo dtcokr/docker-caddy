@@ -1,7 +1,7 @@
 #
 # Build
 #
-FROM golang:1.13-alpine as builder
+FROM golang:1.16-alpine as builder
 
 ENV GO111MODULE=on
 
@@ -17,7 +17,7 @@ RUN cd caddy \
 #
 # Install
 #
-FROM alpine:3.10
+FROM alpine:3.13
 
 LABEL maintainer="dtcokr <dtcokr@outlook.com>" \
   org.label-schema.vcs-url="https://github.com/dtcokr/docker-caddy"
